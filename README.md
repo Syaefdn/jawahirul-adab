@@ -1,1 +1,91 @@
 # jawahirul-adab
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Presentasi Jawahirul Adab</title>
+  <style>
+    body { margin: 0; background-color: #ffffff; font-family: Arial, sans-serif; overflow: hidden; }
+    .slide {
+      display: none;
+      height: 100vh;
+      width: 100vw;
+      align-items: center;
+      justify-content: center;
+    }
+    .slide img {
+      max-width: 90%;
+      max-height: 90%;
+    }
+    .active {
+      display: flex;
+    }
+    .nav {
+      position: fixed;
+      bottom: 40px; /* dinaikkan sedikit agar tidak terpotong */
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 60px; /* ditambah supaya tombol tidak menempel tepi */
+      box-sizing: border-box;
+    }
+    .btn {
+      border: none;
+      color: white;
+      padding: 14px 28px; /* diperbesar agar teks tidak terpotong */
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .prev {
+      background-color: #d64545;
+    }
+    .next {
+      background-color: #1fa84a;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slide active"><img src="images/Cover.jpg" alt="Cover"></div>
+  <div class="slide"><img src="images/1.jpg" alt="Halaman 1"></div>
+  <div class="slide"><img src="images/2.jpg" alt="Halaman 2"></div>
+  <div class="slide"><img src="images/3.jpg" alt="Halaman 3"></div>
+  <div class="slide"><img src="images/4.jpg" alt="Halaman 4"></div>
+  <div class="slide"><img src="images/5.jpg" alt="Halaman 5"></div>
+  <div class="slide"><img src="images/6.jpg" alt="Halaman 6"></div>
+  <div class="slide"><img src="images/7.jpg" alt="Halaman 7"></div>
+  <div class="slide"><img src="images/8.jpg" alt="Halaman 8"></div>
+  <div class="slide"><img src="images/9.jpg" alt="Halaman 9"></div>
+
+  <div class="nav">
+    <button class="btn prev" onclick="prevSlide()">SEBELUMNYA</button>
+    <button class="btn next" onclick="nextSlide()">LANJUT</button>
+  </div>
+
+  <script>
+    let current = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) slide.classList.add('active');
+      });
+    }
+
+    function nextSlide() {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }
+
+    function prevSlide() {
+      current = (current - 1 + slides.length) % slides.length;
+      showSlide(current);
+    }
+  </script>
+
+</body>
+</html>
