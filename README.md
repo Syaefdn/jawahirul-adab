@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Presentasi Jawahirul Adab</title>
   <style>
-    body { margin: 0; background-color: #ffffff; font-family: Arial, sans-serif; overflow: hidden; }
+    body { margin: 0; background-color: #ffffff; font-family: Arial, sans-serif; overflow: visible; }
     .slide {
       display: none;
       height: 100vh;
@@ -27,13 +27,13 @@
       width: 100%;
       display: flex;
       justify-content: space-between;
-      padding: 0 60px;
+      padding: 0 80px;
       box-sizing: border-box;
     }
     .btn {
       border: none;
       color: white;
-      padding: 14px 28px; /* diperbesar agar teks tidak terpotong */
+      padding: 14px 28px;
       border-radius: 8px;
       cursor: pointer;
       font-size: 16px;
