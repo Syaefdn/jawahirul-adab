@@ -23,11 +23,11 @@
     }
     .nav {
       position: fixed;
-      bottom: 40px; /* dinaikkan sedikit agar tidak terpotong */
+      bottom: 40px;
       width: 100%;
       display: flex;
       justify-content: space-between;
-      padding: 0 60px; /* ditambah supaya tombol tidak menempel tepi */
+      padding: 0 60px;
       box-sizing: border-box;
     }
     .btn {
